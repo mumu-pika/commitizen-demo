@@ -1,6 +1,6 @@
 {
   "name": "commitizen-demo",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -9,10 +9,12 @@
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "commit": "cz",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "release": "standard-version"
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "nanoid": "^3.3.4",
     "vue": "^3.2.13"
   },
   "devDependencies": {
@@ -29,7 +31,8 @@
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
     "husky": "^8.0.0",
-    "jest": "^27.0.5"
+    "jest": "^27.0.5",
+    "standard-version": "^9.5.0"
   },
   "eslintConfig": {
     "root": true,

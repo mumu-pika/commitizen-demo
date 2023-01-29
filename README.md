@@ -5,7 +5,7 @@ Vue 项目 commitizen + husky + commitlint，git commit 提交信息规范校验
 - `commitizen`：使用 git cz 代替 git commit，引导用户填写规范的 commit 信息
 - `husky + commitlint`：git commit 动作时，校验 commit 信息，如果不满足 commitizen 规范，无法提交
 
-## 1、Initialize project 初始化项目
+## 1、Initialize project 初始化项目 (这里以vue3项目为例)
 
 ```bash
 npm install @vue/cli -g # 安装 @vue/cli
@@ -91,6 +91,19 @@ npm install --save-dev @commitlint/config-conventional @commitlint/cli
 # Configure commitlint to use conventional config
 echo "module.exports = { extends: ['@commitlint/config-conventional'] };" > commitlint.config.js
 ```
+
+#### 添加husky钩子
+为的是husky调用钩子函数时候会去检查commitlint的配置
+``` bash
+npx husky add .husky/commit-msg  "npx --no -- commitlint --edit ${1}"
+```
+
+#### 配置commitlint
+``` bash
+# Add the path to the configuration file
+commitlint --config commitlint.config.js
+```
+
 
 ## 4、根据commit信息生成changelog
 ### standard version (自动生成)

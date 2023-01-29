@@ -20,6 +20,9 @@
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
+    "@commitlint/format": "^17.4.0",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-plugin-unit-jest": "~5.0.0",
@@ -27,12 +30,16 @@
     "@vue/test-utils": "^2.0.0-0",
     "@vue/vue3-jest": "^27.0.0-alpha.1",
     "babel-jest": "^27.0.6",
+    "conventional-changelog-atom": "^2.0.8",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
     "husky": "^8.0.0",
     "jest": "^27.0.5",
-    "standard-version": "^9.5.0"
+    "lint-staged": "^13.1.0",
+    "standard-version": "^9.5.0",
+    "stylelint": "^14.16.1",
+    "stylelint-config-standard": "^29.0.0"
   },
   "eslintConfig": {
     "root": true,

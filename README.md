@@ -36,6 +36,11 @@ Or if you are using Yarn:
 commitizen init cz-conventional-changelog --yarn --dev --exact
 ```
 
+Or if you are using Pnpm:
+```bash
+commitizen init cz-conventional-changelog --pnpm --save-dev --save-exact
+```
+
 ## 3、Installing husky + commitlint
 
 [commitlint](https://github.com/conventional-changelog/commitlint) 结合 husky 可以在 git commit 时校验 commit 信息是否符合规范。
@@ -43,33 +48,31 @@ commitizen init cz-conventional-changelog --yarn --dev --exact
 ### husk 安装
 husky 可以帮助我们在 执行 git commit 提交的时候，按照eslint 规范进行修复代码。
 husky是一个git hook工具，可以帮助我们触发git提交的各个阶段：pre-commit、commit-msg、pre-push 支持所有的Git 钩子。
-#### Automatic (推荐自动)
-```bash
-npx husky-init && npm install       # npm
-npx husky-init && yarn              # Yarn 1
-yarn dlx husky-init --yarn2 && yarn # Yarn 2+
-pnpm dlx husky-init && pnpm install # pnpm
-```
-#### Manual 手动
 #### 1. 安装 husky
 
 More see: [husky install](https://typicode.github.io/husky/#/?id=install)
 ```bash
+# Install Husky v6
 npm install husky --save-dev
+# or
+yarn add husky --dev
+# or
+pnpm add husky --save-dev
 ```
 
-#### 2. 安装 husky git hooks
+#### 2. 激活 husky git hooks
 
 ```bash
-# 方法1：
+# Activate hooks
 npx husky install
-# 方法2：配置 package.json, scripts："prepare": "husky install"
-npm run prepare
-
+# or
+yarn husky install
+# or
+pnpm husky install
 # husky - Git hooks installed
 ```
 
-#### 3. 测试 husky 钩子作用，添加 pre-commit 钩子
+#### 3. （这步选做）测试用 husky 钩子作用，添加 pre-commit 钩子
 
 ```bash
 npx husky add .husky/pre-commit "npm test"

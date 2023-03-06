@@ -1,4 +1,5 @@
 # commitizen-demo
+> 记录commitizen 代码规范的使用
 
 Vue 项目 commitizen + husky + commitlint，git commit 提交信息规范校验 demo，[conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) 实践。
 
@@ -61,6 +62,7 @@ pnpm add husky --save-dev
 ```
 
 #### 2. 激活 husky git hooks
+> 注意！如果这里激活报错husky -.git 尝试打开项目根目录, 而不要在其他目录使用下面的命令
 
 ```bash
 # Activate hooks
@@ -90,6 +92,8 @@ Install `commitlint` and a `commitlint-config-*` of your choice as devDependency
 npm install --save-dev @commitlint/{cli,config-conventional}
 # For Windows:
 npm install --save-dev @commitlint/config-conventional @commitlint/cli
+
+yarn add --save-dev @commitlint/config-conventional @commitlint/cli
 
 # Configure commitlint to use conventional config
 echo "module.exports = { extends: ['@commitlint/config-conventional'] };" > commitlint.config.js
